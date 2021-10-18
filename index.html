@@ -1,0 +1,195 @@
+<!Doctype Html>  
+<Html>     
+<Head>  
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<Title> RA JEWELRY </Title>  
+<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src = "js/angular.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Trirong|Snell Roundhand">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</Head> 
+
+<Body ng-app="angular" ng-controller="MainController"> 
+<div class="banner">
+<div class="navbar">
+    <div class="logo">
+      <h1> RA Jewelry </h1></a>
+    </div>
+    <div class="nav" style="float:left;" > 
+    <a href="#top" class="scroll-link" data-id="top">Home</a>
+    <a href="#contact" class="scroll-link" data-id="contact" >Contact</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Categories 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#neck" class="scroll-link" data-id="neck">Necklace</a>
+      <a href="#bracelet" class="scroll-link" data-id="bracelet">Bracelet</a>
+      <a href="#earing" class="scroll-link" data-id="earing">Earings</a>
+      <a href="#ring" class="scroll-link" data-id="ring">Rings</a>
+    </div>
+  </div>
+  </div>
+    <a id="cart" style="float:right" >Cart <img src="image/cart.png"/><span class="badge badge-notify my-cart-badge"> {{notify}} </a>
+      
+</div> 
+
+<section class = "home" id="top">
+              <div class="text-content">
+              <h1><br><br>Discover a world <br> of <i>JEWELERY</i></h1>
+              <h2>Good Jewelry for Best Occasion</h2>
+              <div class="white-border-button">
+                    <a href="#hot" class="scroll-link" data-id="hot">BUY NOW</a><br><br><br><br><br><br><br><br><br><br>
+              </div>
+            </div>
+   
+</section>
+
+<section class="products" id="hot">
+  <div class="headerproducts" > <h1><br> HOT PICKS!</h1> </div>
+    <div ng-repeat = "hot in hotpro">
+    <div class="gallery" >
+          <img src="{{hot.image}}" alt="Cinque Terre"></a>
+            <div class="desc" > {{ hot.description }} <br> Price: ₱ {{hot.price}} </div>
+          <center><button type = "button" class="buttons" ng-click = "add_cart(hot)"> Add to cart</button></center>
+        </div>
+        </div>  
+    </section>
+
+  <section class="products" id="ring">
+  <div class="headerproducts" > <h1> <br> RINGS</h1> </div>
+    <div ng-repeat = "ring in ringpro">
+    <div class="gallery" >
+          <img src="{{ring.image}}" alt="Cinque Terre"></a>
+            <div class="desc" > {{ ring.description }} <br> Price: ₱ {{ring.price}} </div>
+          <center><button type = "button" class="buttons" ng-click = "add_cart(ring)"> Add to cart</button></center>
+        </div>
+        </div>  
+    </section>
+
+<section class="products" id="neck">
+  <div class="headerproducts" > <h1><br> NECKLACE</h1> </div>
+    <div ng-repeat = "neck in neckpro">
+    <div class="gallery" >
+          <img src="{{neck.image}}" alt="Cinque Terre"></a>
+            <div class="desc" > {{ neck.description }} <br> Price: ₱ {{neck.price}} </div>
+              <center><button type = "button" class="buttons" ng-click = "add_cart(neck)"> Add to cart</button></center>
+        </div>
+        </div>  
+    </section>
+
+  <section class="products" id="bracelet">
+  <div class="headerproducts" > <h1> <br> BRACELETS</h1> </div>
+    <div ng-repeat = "brace in braceletpro">
+    <div class="gallery" >
+          <img src="{{brace.image}}" alt="Cinque Terre"></a>
+            <div class="desc" > {{ brace.description }} <br> Price: ₱ {{brace.price}} </div>
+          <center><button type = "button" class="buttons" ng-click = "add_cart(brace)" > Add to cart</button></center>
+        </div>
+        </div>  
+    </section>
+
+  <section class="products" id="earing">
+  <div class="headerproducts" > <h1> <br> EARINGS</h1> </div>
+    <div ng-repeat = "ear in earingpro">
+    <div class="gallery" >
+          <img src="{{ear.image}}" alt="Cinque Terre"></a>
+            <div class="desc" > {{ ear.description }} <br> Price: ₱ {{ear.price}} </div>
+          <center><button type = "button" class="buttons" ng-click = "add_cart(ear)"> Add to cart</button></center>
+        </div>
+        </div>  
+    </section>
+
+<div class ="contact" id="contact">
+  <div class="row">
+    <div class="column">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5814.55654615131!2d120.70365789753126!3d14.05314768907117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd975e03a30835%3A0x832f7e1947669a80!2sSabang%2C%20Batangas!5e0!3m2!1sen!2sph!4v1634531332758!5m2!1sen!2sph" frameborder="0" style="border:0"  height="450px" width="100%"></iframe>
+        
+    </div>
+    <div class="column">
+      <h2> Contact Us </h2>
+              <h3>Get In Touch</h3>
+              <h4>Tel: 0965-245-1527 <br> Address: Sabang Tuy Batangas <br> Email: RAjewelry@gmail.com</h4>
+              <h5> Follow us: </h5>
+              <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+    </div>
+  </div>
+</div>
+
+<div id="myCart" class="modal" > 
+  <div class = "divcart" style="overflow-x:auto;">
+    <span class="close">&times;</span>
+        <div class = "carthead" >
+          <h5> MY CART</h5>
+        </div>
+
+        <div >
+          <table class = "table" id = "tbl">
+            <thead class="thead-dark">
+              <tr >
+                <th>Product</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+                <td>{{cart.description}}</td>
+                <td> <img src="{{cart.image}}" style="width:70px; height: 70px;"></td>
+                <td>₱{{cart.price}}</td>
+                <td><button type = "button" class="buttons" ng-click = "remove_cart(cart)" > Remove </button></td>
+              </tr>
+              <tr >
+                <td> </td>
+                <td align = "right">Total</td>
+                <td>₱{{total}}</td>
+                <td> </td>
+              </tr>
+            </tbody>
+          </table>
+       <button type = "button" class="buttons" style="float:right"  onclick="checkout()"> Checkout</button>
+        </div>
+      </div>
+</div>
+</div>
+
+<script>
+var modal = document.getElementById("myCart");
+var btn = document.getElementById("cart");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function checkout() {
+        var rowCount = tbl.rows.length;
+        for (var i = rowCount - 1; i > 0; i--) {
+            tbl.deleteRow(i);
+        }
+    }
+
+</script>
+  <script src ="js/app.js"></script>
+  <script src = "controllers/MainController.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=sample"></script>
+</Body>   
+</Html>  
